@@ -1,5 +1,5 @@
 local enemy = require("models.enemy")
-local config = require("models.config")
+local config = require("configs.config")
 
 local bomber = {
     new = function ()

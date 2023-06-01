@@ -1,4 +1,4 @@
-local item = require("item")
+local item = require("models.item")
 
 local potion = {
     new = function ()
