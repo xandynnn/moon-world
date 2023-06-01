@@ -8,6 +8,12 @@
             "type": "lua",
             "request": "launch",
             "name": "Debug",
+            "program": "${workspaceFolder}/tests/account.test.lua"
+        },
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "Debug",
             "program": "${workspaceFolder}/game.lua"
         },
         {
