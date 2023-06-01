@@ -1,11 +1,11 @@
-local config = require("models.config")
+local config = require("configs.config")
 
 local player = {
     new = function ( name )
         return {
-            life = config.life,
-            health = config.maxHealth,
-            atack = config.baseAtack,
+            life = config.character.life,
+            health = config.character.maxHealth,
+            atack = config.character.baseAtack,
             potions = {},
             name = name,
         }
