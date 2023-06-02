@@ -3,13 +3,15 @@ local config = require("configs.config")
 local player = require("models.player")
 
 local zombie = {
-    new = function ()
-        local newZombie = enemy.new(config.character.baseAtack, "zombies")
-        newZombie.brainEat = true
-        return newZombie
+    new = function ( self )
+        local newZombie = enemy:new(config.character.baseAtack, "zombies")
+        self.force = newZombie.force
+        self.category = newZombie.category
+        self.brainEat = true
+        return self
     end,
-    attack = function(playerInstance, zombieInstance )
-        player.wasAttacked(playerInstance, zombieInstance.force)
+    attack = function(self, playerInstance )
+        player.wasAttacked(playerInstance, self.force)
     end
 }
 

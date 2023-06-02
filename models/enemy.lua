@@ -1,9 +1,10 @@
 local enemy = {
-    new = function ( force, category )
-        return {
-            force = force,
-            category = category
-        }
+    force = 0,
+    category = "",
+    new = function ( self, force, category )
+        self.force = force
+        self.category = category
+        return self
     end
 }
 
